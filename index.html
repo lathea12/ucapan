@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Selamat Ulang Tahun</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 60%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .slide {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slide img {
+            width: 100px;
+            height: 100px;
+        }
+        .active {
+            display: block;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #ff69b4;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="C:\Kajol\davin-project\images\sticker1.gif">
+            <h2>Selamat Ulang Tahun!</h2>
+            <p>Semoga panjang umur dan bahagia selalu 🎉</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Kajol\davin-project\images\sticker2.gif">
+            <h2>Doa Terbaik</h2>
+            <p>Semoga segala impianmu menjadi kenyataan 💖</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Kajol\davin-project\images\sticker3.gif">
+            <h2>Have a Great Day!</h2>
+            <p>Nikmati hari spesialmu dengan senyuman 😊</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Kajol\davin-project\images\sticker4.gif">
+            <h2>Have a Great Day!</h2>
+            <p>Nikmati hari spesialmu dengan senyuman 😊</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Kajol\davin-project\images\sticker5.gif">
+            <h2>Have a Great Day!</h2>
+            <p>Nikmati hari spesialmu dengan senyuman 😊</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Kajol\davin-project\images\sticker6.gif">
+            <h2>Have a Great Day!</h2>
+            <p>Nikmati hari spesialmu dengan senyuman 😊</p>
+        </div>
+        <button class="btn" onclick="nextSlide()">Lanjut</button>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        function nextSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+    </script>
+</body>
+</html>
